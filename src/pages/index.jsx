@@ -2,42 +2,70 @@ import React from "react"
 import styled from "styled-components"
 
 import PostPreview from "../components/postPreview"
+import AllTags from "../components/allTags"
 
 
-const StyledLayout = styled.section`
+const StyledLayout = styled.div`
   position: relative;
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas: 
-    "header header"
-    "articles aside";
+  grid-template-columns: 1fr;
+  grid-gap: 2rem 7rem;
+  grid-template-areas:
+    "main"
+    "aside";
+  @media (min-width: 800px) {
+    margin-top: 3rem;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+      "main aside";
+  }
 `
 
 const StyledSubHeader = styled.header`
   grid-area: header;
   font-size: 1.7rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 2rem;
 `
 
 const StyledPostsList = styled.main`
-  grid-area: articles;
-  display: grid;
-  grid-row-gap: 2rem;
+  grid-area: main;
+  /* display: grid; */
+  /* row-gap: 2rem; */
+  /* grid-template-areas: "header" "content"; */
+`
+
+const StyledAside = styled.aside`
+  grid-area: aside;
+  /* display: grid; */
+  /* grid-template-areas: "header" "content"; */
 `
 
 const Index = (props) => {
   const { allMdx } = props.data
+  const { group: categories } = props.data.categories
   const posts = allMdx.edges.slice(1)
   return (
     <StyledLayout>
-      <StyledSubHeader>
-          <h4>Recently Published</h4>
-      </StyledSubHeader>
-      <StyledPostsList>
-        {posts.map(post => <PostPreview key={post.node.id} {...post.node} />)}
-      </StyledPostsList>
+      <>
+        <StyledPostsList>
+          <StyledSubHeader>
+              <strong>Recently Published</strong>
+          </StyledSubHeader>
+          {posts.map(post => <PostPreview key={post.node.id} {...post.node} />)}
+        </StyledPostsList>
+      </>
+      <>
+        <StyledAside>
+          <StyledSubHeader>
+            <strong>Categories</strong>
+          </StyledSubHeader>
+          <section>
+            <AllTags categories={categories} />
+          </section>
+        </StyledAside>
+      </>
     </StyledLayout>
   )
 }
@@ -59,6 +87,11 @@ export const pageQuery = graphql`
             tags
           }
         }
+      }
+    }
+    categories: allMdx(limit: 2000) {
+      group(field: frontmatter___category) {
+        fieldValue
       }
     }
   }

@@ -11,7 +11,7 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     actions.createNodeField({
       name: "slug",
       node,
-      value: slug ? "/${slug}" : fileNameSlug,
+      value: slug ? `/${slug}` : fileNameSlug,
     })
   }
 }
@@ -42,7 +42,6 @@ exports.createPages = async ({graphql, actions}) => {
     return
   }
   
-  console.log(kebabCase(categories.fieldValue))
   result.data.allMdx.edges.forEach(({node}) => {
     actions.createPage({
       path: kebabCase(node.fields.slug),
@@ -56,12 +55,12 @@ exports.createPages = async ({graphql, actions}) => {
   // Extract tag data from query
   const categories = result.data.categories.group
   // Make tag pages
-  categories.forEach(tag => {
+  categories.forEach(category => {
     actions.createPage({
-      path: kebabCase(categories.fieldValue),
+      path: kebabCase(category.fieldValue),
       component: path.resolve("./src/templates/category.jsx"),
       context: {
-        category: categories.fieldValue,
+        category: category.fieldValue,
       },
     })
   })

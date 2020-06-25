@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <Header />
       <StyledMainContainer>
-        <main>{children}</main>
+        {children}
       </StyledMainContainer>
     </>
   )
