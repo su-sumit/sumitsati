@@ -6,7 +6,7 @@ import Header from "./header"
 
 const StyledMainContainer = styled.div`
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 4rem auto;
   padding: 1rem;
 
   @media (min-width: 800px) {

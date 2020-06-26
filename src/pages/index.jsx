@@ -12,8 +12,8 @@ const StyledLayout = styled.div`
   grid-template-columns: 1fr;
   grid-gap: 2rem 7rem;
   grid-template-areas:
-    "main"
-    "aside";
+    "aside"
+    "main";
   @media (min-width: 800px) {
     margin-top: 3rem;
     grid-template-columns: 2fr 1fr;
