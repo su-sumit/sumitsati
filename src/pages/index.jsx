@@ -26,7 +26,11 @@ const StyledSubHeader = styled.header`
   grid-area: header;
   font-size: 1.7rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
+
+  @media (min-width:800px) {
+    margin-bottom: 2rem;
+  }
 `
 
 const StyledPostsList = styled.main`
@@ -38,6 +42,9 @@ const StyledPostsList = styled.main`
 
 const StyledAside = styled.aside`
   grid-area: aside;
+  @media (max-width: 800px) {
+    margin-bottom: 1rem;
+  }
   /* display: grid; */
   /* grid-template-areas: "header" "content"; */
 `

@@ -8,9 +8,9 @@ const StyledLink = styled((props) => <Link { ...props } />)`
   font-size: 1.5rem;
 `
 
-const Heading = (props) => (
-  <StyledLink to="/">
-    <h3>{props.text}</h3>
+const Heading = ({text, to}) => (
+  <StyledLink to={to}>
+    <h3>{text}</h3>
   </StyledLink>
 )
 

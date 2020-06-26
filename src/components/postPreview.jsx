@@ -38,16 +38,16 @@ const PostPreview = (props) => {
   const {fields, frontmatter} = props;
   const {date, excerpt, category, title} = frontmatter;
   return (
-    <StyledArticleWrapper href="/">
+    <StyledArticleWrapper>
       <StyledCardHeader>
         <StyledArticleTime dateTime="2020-06-07">{date}</StyledArticleTime>
         <Pill category={category} />
       </StyledCardHeader>
-      <Heading text={title} />
+      <Heading text={title} to={fields.slug} />
       <StyledExcerpt>
         {excerpt}
       </StyledExcerpt>
-      <Link to="/">
+      <Link to={fields.slug}>
         Read more
       </Link>
     </StyledArticleWrapper>
