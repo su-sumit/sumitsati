@@ -1,1 +1,0 @@
-{"componentChunkName":"component---src-templates-category-jsx","path":"/next","result":{"data":{"allMdx":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/dummy-next/"},"frontmatter":{"title":"How I Used Brotli to Get Even Smaller CSS and JavaScript Files at CDN Scale"}}}]}},"pageContext":{"category":"next"}}}
