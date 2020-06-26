@@ -19,9 +19,9 @@ const StyledInput = styled.input `
           --s: 1;
           content: '';
           position: absolute;
-          height: 4px;
-          top: 10px;
-          width: 24px;
+          height: 3px;
+          top: 8px;
+          width: 20px;
           background: var(--line);
           transform: scaleX(var(--s));
           transition: transform var(--duration) ease;
@@ -33,24 +33,24 @@ const StyledInput = styled.input `
           border-radius: 2px 0 0 2px;
       }
       &:after {
-          left: 28px;
+          left: 22px;
           transform-origin: 100% 50%;
           border-radius: 0 2px 2px 0;
       }
       span {
-          padding-left: 56px;
+          padding-left: 42px;
           line-height: 24px;
           color: var(--text);
           &:before {
               --x: 0;
               --b: var(--circle);
-              --s: 4px;
+              --s: 3px;
               content: '';
               position: absolute;
               left: 0;
               top: 0;
-              width: 24px;
-              height: 24px;
+              width: 18px;
+              height: 18px;
               border-radius: 50%;
               box-shadow: inset 0 0 0 var(--s) var(--b); 
               transform: translateX(var(--x));
@@ -71,7 +71,7 @@ const StyledInput = styled.input `
           }
           span {
               &:before {
-                  --x: 28px;
+                  --x: 24px;
                   --s: 12px;
                   --b: var(--dot);
               }
