@@ -14,7 +14,7 @@ const StyledImage = styled.div`
   width: 20px;
   height: 20px;
   margin-right: 0.5rem;
-  background: url(${props => `/svg/${props.image}.svg`}) center no-repeat;
+  background: url(${props => `/images/svg/${props.image}.svg`}) center no-repeat;
   border-radius: 50%;
 `
 
