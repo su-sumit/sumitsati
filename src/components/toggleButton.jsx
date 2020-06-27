@@ -39,7 +39,7 @@ const StyledInput = styled.input `
       }
       span {
           padding-left: 42px;
-          line-height: 24px;
+          line-height: 20px;
           color: var(--text);
           &:before {
               --x: 0;

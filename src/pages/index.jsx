@@ -2,25 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 import PostPreview from "../components/postPreview"
-import AllTags from "../components/allTags"
-
-
-const StyledLayout = styled.div`
-  position: relative;
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2rem 7rem;
-  grid-template-areas:
-    "aside"
-    "main";
-  @media (min-width: 800px) {
-    margin-top: 3rem;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: 
-      "main aside";
-  }
-`
+import Pill from "../components/pill"
+import GridLayout from "../components/gridLayout"
 
 const StyledSubHeader = styled.header`
   grid-area: header;
@@ -54,7 +37,7 @@ const Index = (props) => {
   const { group: categories } = props.data.categories
   const posts = allMdx.edges.slice(1)
   return (
-    <StyledLayout>
+    <GridLayout>
       <>
         <StyledPostsList>
           <StyledSubHeader>
@@ -69,11 +52,11 @@ const Index = (props) => {
             <strong>Categories</strong>
           </StyledSubHeader>
           <section>
-            <AllTags categories={categories} />
+            {categories.map( ({fieldValue}) => <Pill category={fieldValue}/>)}
           </section>
         </StyledAside>
       </>
-    </StyledLayout>
+    </GridLayout>
   )
 }
 

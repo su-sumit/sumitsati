@@ -32,11 +32,20 @@ module.exports = {
               maxWidth: 1200
             }
           },
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: 'Dark+ (default dark)',
+              // extension: ['One Dark Pro']
+            }
+          },
+          `gatsby-remark-autolink-headers`,
         ],
       },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-dark-mode`,
+    `gatsby-remark-smartypants`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {

@@ -11,20 +11,20 @@ const StyledLink = styled(props => <Link {...props} />)`
   position: relative;
   overflow: hidden;
   padding: 0.2rem 0;
-  &:after {
-    content: "";
-    background: var(--same);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
+  transition: top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  // &:after {
+  //   content: "";
+  //   background: var(--same);
+  //   position: absolute;
+  //   top: 100%;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  // }
 
-  &:hover:after {
+  &:hover {
     mix-blend-mode: difference;
-    top: 0;
+    // top: 0;
   }
 `
 

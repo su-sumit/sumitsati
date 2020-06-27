@@ -6,20 +6,25 @@ const GlobalStyles = createGlobalStyle`
     --card-bg: #f5f5f5;
     --dull: rgba(118, 126, 134, 0.7);
     --bg-dark: #171717;
+    --bg: inherit;
     --less-white: #eee;
     --invert: black;
     --same: white;
+    --green: #75e091;
+    --yellow: #f9c661;
+    --gray: #636568;
   }
 
   body {
     margin: 0;
     font-family: roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
+    background: var(--bg);
 
     &.light {
       --textTitle: var(--black);
       --text-normal: var(--black);
-      background: inherit;
+      --bg: inherit;
       color: var(--black)
     }
     
@@ -29,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
       --card-bg: rgba(0,0,0,.2);
       --invert: white;
       --same: black;
-      background: var(--bg-dark);
+      --bg: var(--bg-dark);
       color: var(--less-white);
     }
   }
