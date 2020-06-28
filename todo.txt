@@ -1,1 +1,4 @@
 - create a width wrapper
+- move all headings to wesbos style component
+- nest css styled component
+- smooth scroll

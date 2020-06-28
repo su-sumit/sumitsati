@@ -1,27 +1,11 @@
-// import React from "react";
-// import Highlight from "prism-react-renderer";
+import styled from "styled-components"
 
-// const CodeBlock = ({ children, className }) => {
-//   const language = className ? className.replace(/language-/, "") : "";
+const Code = styled.code`
+  &.syntax {
+    background-color: var(--bg-snippet);
+    border-radius: var(--grvsc-border-radius);
+    padding: 0.4rem 0.5rem;
+  }
+`
 
-//   return (
-//     <Highlight
-//       code={children}
-//       language={language}
-//     >
-//       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-//         <pre className={className} style={{ ...style, padding: "20px" }}>
-//           {tokens.map((line, i) => (
-//             <div key={i} {...getLineProps({ line, key: i })}>
-//               {line.map((token, key) => (
-//                 <span key={key} {...getTokenProps({ token, key })} />
-//               ))}
-//             </div>
-//           ))}
-//         </pre>
-//       )}
-//     </Highlight>
-//   );
-// };
-
-// export default CodeBlock;
+export default Code

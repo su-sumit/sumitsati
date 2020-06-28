@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import { MDXProvider } from '@mdx-js/react'
 
 import GlobalStyles from "../styles/global"
 import Header from "./header"
+import mdxComponents from "./mdxComponents"
 
 const StyledMainContainer = styled.div`
   max-width: 1100px;
@@ -24,9 +26,11 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyles />
       <Header />
-      <StyledMainContainer>
-        {children}
-      </StyledMainContainer>
+      <MDXProvider components={mdxComponents}>
+        <StyledMainContainer>
+          {children}
+        </StyledMainContainer>
+      </MDXProvider>
     </>
   )
 }

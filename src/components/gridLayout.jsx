@@ -7,9 +7,7 @@ const StyledLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem 7rem;
-  grid-template-areas:
-    "aside"
-    "main";
+  grid-template-areas: ${ props => props.isMdx ? `"main" "main"`: `"aside" "main"` };
   @media (min-width: 800px) {
     margin-top: 3rem;
     grid-template-columns: 2fr 1fr;
@@ -18,8 +16,8 @@ const StyledLayout = styled.div`
   }
 `
 
-const GridLayout = ({children}) => (
-  <StyledLayout>
+const GridLayout = ({children, isMdx}) => (
+  <StyledLayout isMdx={isMdx}>
     {children}
   </StyledLayout>
 )

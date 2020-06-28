@@ -13,6 +13,10 @@ import TableOfContents from "../components/tableOfContent"
 // `
 const StyledWrapper = styled.main`
   grid-area: main;
+  line-height: 1.3;
+  font-size: 1.25rem;
+  letter-spacing: 0.02rem;
+  /* overflow-x: auto; */
 `
 
 const components = {
@@ -21,9 +25,9 @@ const components = {
 
 export default function Post({data}) {
   const { body, tableOfContents } = data.mdx
-
+  console.log(tableOfContents)
   return (
-    <GridLayout>
+    <GridLayout isMdx={true} >
       {/* <Banner {...frontmatter} /> */}
       <MDXRenderer components={components}>
         {body}

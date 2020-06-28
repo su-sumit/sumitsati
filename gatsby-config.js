@@ -35,13 +35,41 @@ module.exports = {
           {
             resolve: `gatsby-remark-vscode`,
             options: {
-              theme: 'Dark+ (default dark)',
-              // extension: ['One Dark Pro']
+              wrapperClassName: 'syntax',
+              theme: {
+                default: 'Light+ (default light)',
+                parentSelector: {
+                  '.dark': 'Dark+ (default dark)',
+                },
+              },
+              inlineCode: {
+                marker: '^',
+                className: 'syntax',
+                theme: {
+                  default: 'Light+ (default light)',
+                  dark: 'Dark+ (default dark)'
+                }
+              }
             }
           },
-          `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: `autolink-anchor`,
+              elements: [`h2`]
+            }
+          },
         ],
       },
+    },
+    {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        excludePaths: ["/", "/about"," /blog", "/uses"],
+        height: 2,
+        color: `var(--green)`,
+        footerHeight: 0,
+      }
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-dark-mode`,

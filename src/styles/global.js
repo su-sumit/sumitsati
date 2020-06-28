@@ -13,19 +13,33 @@ const GlobalStyles = createGlobalStyle`
     --green: #75e091;
     --yellow: #f9c661;
     --gray: #636568;
+    --slate: #f7f7f7;
+
+    /* remark-vscode */
+    --grvsc-border-radius: 3px;
+    --grvsc-padding-v: 1.5rem;
+    --grvsc-padding-h: 1.5rem;
+    scroll-behavior: smooth;
   }
+
+  /* pre.grvsc-container {
+    background-color: var(--card-bg);
+  } */
 
   body {
     margin: 0;
+    font-size: 1rem;
     font-family: roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     background: var(--bg);
+    letter-spacing: 0.025rem;
 
     &.light {
       --textTitle: var(--black);
       --text-normal: var(--black);
       --bg: inherit;
-      color: var(--black)
+      --bg-snippet: var(--slate);
+      color: var(--black);
     }
     
     &.dark {
@@ -35,6 +49,7 @@ const GlobalStyles = createGlobalStyle`
       --invert: white;
       --same: black;
       --bg: var(--bg-dark);
+      --bg-snippet: var(--card-bg);
       color: var(--less-white);
     }
   }
@@ -51,37 +66,6 @@ const GlobalStyles = createGlobalStyle`
     background: var(--card-bg);
     text-transform: capitalize;
   }
-
-  /* .ml {
-    color: white;
-    background: #eb9a2be8;
-    border-color: #ac6729
-  }
-  .javascript {
-    color: black;
-    background: #ffeb64;
-    border-color: #f0db4f;
-  }
-  .react {
-    color: white;
-    background: #282c34;
-    border-color: #58c0dd;
-  }
-  .next {
-    color: black;
-    background: white;
-    border-color: black
-  }
-  .node {
-    color: black;
-    background: #c4eb9a;
-    border-color: #94cd56
-  }
-  .aws {
-    color: black;
-    background: #ffc262;
-    border-color: #f39b2c
-  } */
 `
 
 export default GlobalStyles

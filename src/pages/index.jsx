@@ -52,7 +52,7 @@ const Index = (props) => {
             <strong>Categories</strong>
           </StyledSubHeader>
           <section>
-            {categories.map( ({fieldValue}) => <Pill category={fieldValue}/>)}
+            {categories.map( ({fieldValue}) => <Pill key={fieldValue} category={fieldValue}/>)}
           </section>
         </StyledAside>
       </>

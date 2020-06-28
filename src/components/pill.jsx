@@ -18,7 +18,9 @@ const StyledImage = styled.div`
   border-radius: 50%;
 `
 
-const Pill = ({category}) => {
+const Pill = (props) => {
+  const {category} = props
+   console.log("props ====>", props)
   return (
     <div className={`tag ${category}`}>
       <StyledImage image={category} />
