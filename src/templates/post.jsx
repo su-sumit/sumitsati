@@ -25,7 +25,6 @@ const components = {
 
 export default function Post({data}) {
   const { body, tableOfContents } = data.mdx
-  console.log(tableOfContents)
   return (
     <GridLayout isMdx={true} >
       {/* <Banner {...frontmatter} /> */}

@@ -20,7 +20,6 @@ const StyledImage = styled.div`
 
 const Pill = (props) => {
   const {category} = props
-   console.log("props ====>", props)
   return (
     <div className={`tag ${category}`}>
       <StyledImage image={category} />
