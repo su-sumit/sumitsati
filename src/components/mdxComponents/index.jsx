@@ -4,11 +4,13 @@ import P from "./paragraph"
 import Pre from "./pre"
 import Code from "./code"
 import H from "../headings"
+import A from "./anchor"
 
 export default {
   p: P,
   pre: Pre,
   code: Code,
+  a: A,
   h1: props => <H as="h1" {...props} />,
   h2: props => <H as="h2" {...props} />,
   h3: props => <H as="h3" {...props} />,

@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
     --less-white: #eee;
     --invert: black;
     --same: white;
-    --green: #75e091;
+    --green: #00c764;
     --yellow: #f9c661;
     --gray: #636568;
     --slate: #f7f7f7;
@@ -65,6 +65,28 @@ const GlobalStyles = createGlobalStyle`
     border: 2px solid #a9a9a914;
     background: var(--card-bg);
     text-transform: capitalize;
+  }
+
+  /* scroll styled */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--invert) var(--same);
+  }
+
+  /* Works on Chrome/Edge/Safari */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background: var(--invert);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--same);
+    border-radius: 5px;
+    border: 4px solid var(--invert);
   }
 `
 

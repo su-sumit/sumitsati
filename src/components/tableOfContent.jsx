@@ -20,33 +20,31 @@ const StyledLink = styled(props => <Link {...props} />)`
   color: inherit;
   text-decoration: none;
   letter-spacing: 0.06rem;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   transition: all .2s ease-in-out;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
 `
 
 const StyledScrollSpy = styled((props) => <Scrollspy {...props} />)`
   list-style: none;
   margin: 0;
   padding: 0;
-  opacity: 0.8;
   font-size: 1rem;
   color: var(--gray);
   margin-bottom: 10px;
   text-transform: capitalize;
-  &:hover {
-    opacity: 1;
-  }
 
   li {
     margin-bottom: 13px;
   }
 
-  .active {
+  .active a {
+    opacity: 1;
     color: var(--green);
-
-    a {
-      border-bottom-color:var(--green);
-    }
+    border-bottom-color:var(--green);
   }
 ` 
 

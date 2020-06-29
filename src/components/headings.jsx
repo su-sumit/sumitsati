@@ -11,6 +11,10 @@ const headingSizes = {
 };
 
 const StyledH = styled.h1`
+  margin-top: ${({mt=false}) => (`${mt}rem` ?? initial)};
+  margin-bottom: ${({mb=false}) => (`${mb}rem` ?? initial)};
+  margin-left: ${({ml=false}) => (`${ml}rem` ?? initial)};
+  margin-right: ${({mr=false}) => (`${mr}rem` ?? initial)};
   /* Default h1 */
   font-size: ${headingSizes.h1}rem;
   /* Default allow to change */
@@ -22,6 +26,8 @@ const StyledH = styled.h1`
     margin-left: -23px;
     margin-right: 5px;
     opacity: 0;
+    text-decoration: none;
+    border: none;
     svg {
       width: 18px;
       height: 18px;
