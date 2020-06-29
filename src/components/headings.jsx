@@ -36,7 +36,7 @@ const StyledH = styled.h1`
   &:hover .autolink-anchor {
     opacity: 1;
     svg {
-      stroke: var(--green);
+      stroke: var(--accent);
     }
   }
 `;

@@ -3,10 +3,13 @@ import styled from "styled-components"
 
 const StyledPre = styled.pre`
   &.syntax {
-    background-color: var(--bg-snippet);
+    background-color: var(--bg-snippet) !important;
     margin-bottom: 2rem;
     overflow: auto;
     max-height: 50vh;
+    code {
+      padding: initial;
+    }
   }
 `
 

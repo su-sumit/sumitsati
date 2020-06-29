@@ -44,10 +44,12 @@ module.exports = {
               },
               inlineCode: {
                 marker: '^',
-                className: 'syntax',
+                className: 'inline-code',
                 theme: {
                   default: 'Light+ (default light)',
-                  dark: 'Dark+ (default dark)'
+                  parentSelector: {
+                    '.dark': 'Dark+ (default dark)',
+                  },
                 }
               }
             }
@@ -67,7 +69,7 @@ module.exports = {
       options: {
         excludePaths: ["/", "/about"," /blog", "/uses"],
         height: 2,
-        color: `var(--green)`,
+        color: `var(--accent)`,
         footerHeight: 0,
       }
     },

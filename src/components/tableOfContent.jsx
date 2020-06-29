@@ -33,7 +33,7 @@ const StyledScrollSpy = styled((props) => <Scrollspy {...props} />)`
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  color: var(--gray);
+  color: var(--dark-gray);
   margin-bottom: 10px;
   text-transform: capitalize;
 
@@ -43,8 +43,8 @@ const StyledScrollSpy = styled((props) => <Scrollspy {...props} />)`
 
   .active a {
     opacity: 1;
-    color: var(--green);
-    border-bottom-color:var(--green);
+    color: var(--accent);
+    border-bottom-color:var(--accent);
   }
 ` 
 

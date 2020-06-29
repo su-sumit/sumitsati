@@ -3,22 +3,29 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
   :root {
     --black: hsl(225deg, 15%, 15%);
-    --card-bg: #f5f5f5;
+    --card-bg: #f7f7f7;
     --dull: rgba(118, 126, 134, 0.7);
     --bg-dark: #171717;
     --bg: inherit;
-    --less-white: #eee;
+    --light-gray: #f1f1f1;
     --invert: black;
     --same: white;
     --green: #00c764;
     --yellow: #f9c661;
-    --gray: #636568;
+    --dark-gray: #636568;
     --slate: #f7f7f7;
+    --overlay-dark: rgba(0,0,0,.2);
+    --aqua: #5afff0;
 
     /* remark-vscode */
     --grvsc-border-radius: 3px;
     --grvsc-padding-v: 1.5rem;
     --grvsc-padding-h: 1.5rem;
+    --grvsc-line-highlighted-background-color: var(--light-gray); /* default: transparent */
+    --grvsc-line-highlighted-border-color: var(--green); /* default: transparent */
+    --grvsc-line-highlighted-border-width: 2px;
+    
+    /* scroll */
     scroll-behavior: smooth;
   }
 
@@ -39,18 +46,23 @@ const GlobalStyles = createGlobalStyle`
       --text-normal: var(--black);
       --bg: inherit;
       --bg-snippet: var(--slate);
+      --accent: var(--green);
+      --scroll-track: var(--light-gray);
       color: var(--black);
     }
     
     &.dark {
-      --text-title: var(--less-white);
-      --text-normal: var(--less-white);
-      --card-bg: rgba(0,0,0,.2);
+      --text-title: var(--light-gray);
+      --text-normal: var(--light-gray);
+      --card-bg: var(--overlay-dark);
       --invert: white;
+      --accent: var(--green);
       --same: black;
       --bg: var(--bg-dark);
-      --bg-snippet: var(--card-bg);
-      color: var(--less-white);
+      --bg-snippet: black;
+      --scroll-track: black;
+      color: var(--light-gray);
+      --grvsc-line-highlighted-background-color: var(--overlay-dark);
     }
   }
 
@@ -67,7 +79,11 @@ const GlobalStyles = createGlobalStyle`
     text-transform: capitalize;
   }
 
-  /* scroll styled */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* scroll styles */
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--invert) var(--same);
@@ -77,16 +93,17 @@ const GlobalStyles = createGlobalStyle`
   ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
+    /* background: transparent; */
   }
   ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    background: var(--invert);
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+    background: var(--scroll-track);
   }
   ::-webkit-scrollbar-thumb {
-    background-color: var(--same);
+    background-color: var(--invert);
     border-radius: 5px;
-    border: 4px solid var(--invert);
+    border: 4px solid var(--scroll-track);
   }
 `
 
