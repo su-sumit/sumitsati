@@ -11,7 +11,7 @@ const StyledSubHeader = styled.header`
   font-weight: 700;
   margin-bottom: 1.2rem;
 
-  @media (min-width:800px) {
+  @media (min-width:640px) {
     margin-bottom: 2rem;
   }
 `
@@ -25,7 +25,7 @@ const StyledPostsList = styled.main`
 
 const StyledAside = styled.aside`
   grid-area: aside;
-  @media (max-width: 800px) {
+  @media (max-width: 640px) {
     margin-bottom: 1rem;
   }
   /* display: grid; */

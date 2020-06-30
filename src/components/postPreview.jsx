@@ -11,7 +11,7 @@ const StyledArticleWrapper = styled.article`
   border-radius: 3px;
   background: var(--card-bg);
   margin-bottom: 1.5rem;
-  @media (min-width: 800px) {
+  @media (min-width: 640px) {
     margin-bottom: 2rem
   }
 `

@@ -11,16 +11,16 @@ const headingSizes = {
 };
 
 const StyledH = styled.h1`
-  margin-top: ${({mt=false}) => (`${mt}rem` ?? initial)};
-  margin-bottom: ${({mb=false}) => (`${mb}rem` ?? initial)};
-  margin-left: ${({ml=false}) => (`${ml}rem` ?? initial)};
-  margin-right: ${({mr=false}) => (`${mr}rem` ?? initial)};
+  margin-top: ${({mt=false}) => mt && `${mt}rem`};
+  margin-bottom: ${({mb=false}) => mb && `${mb}rem`};
+  margin-left: ${({ml=false}) => ml && `${ml}rem`};
+  margin-right: ${({mr=false}) => mr && `${mr}rem`};
   /* Default h1 */
   font-size: ${headingSizes.h1}rem;
   /* Default allow to change */
   font-size: ${({ as }) => as && `${headingSizes[as]}rem`};
-  /* Visually override if need different font size vs the semantic element */
-  font-size: ${({ looksLike }) => looksLike && `${headingSizes[looksLike]}rem`};
+  /* If font size is passed */
+  font-size: ${({ size }) => size && `${size}rem`};
   position: relative;
   .autolink-anchor {
     margin-left: -23px;

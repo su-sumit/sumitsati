@@ -11,7 +11,7 @@ const StyledMainContainer = styled.div`
   margin: 0 auto 4rem auto;
   padding: 1rem;
 
-  @media (min-width: 800px) {
+  @media (min-width: 640px) {
     padding: 1.5rem;
   }
 

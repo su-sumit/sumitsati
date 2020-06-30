@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 import GridLayout from "../components/gridLayout"
 import TableOfContents from "../components/tableOfContent"
+import PostBanner from "../components/banner"
 
 // const StyledWrapper = styled.main`
 //   font-family: inherit;
@@ -24,15 +25,17 @@ const components = {
 }
 
 export default function Post({data}) {
-  const { body, tableOfContents } = data.mdx
+  const { body, tableOfContents, frontmatter } = data.mdx
   return (
-    <GridLayout isMdx={true} >
-      {/* <Banner {...frontmatter} /> */}
-      <MDXRenderer components={components}>
-        {body}
-      </MDXRenderer>
-      { tableOfContents?.items && <TableOfContents tableOfContents={tableOfContents.items}/> }
-    </GridLayout>
+    <>
+      <PostBanner {...frontmatter} />
+      <GridLayout isMdx={true} >
+        <MDXRenderer components={components}>
+          {body}
+        </MDXRenderer>
+        { tableOfContents?.items && <TableOfContents tableOfContents={tableOfContents.items}/> }
+      </GridLayout>
+    </>
   )
 }
 

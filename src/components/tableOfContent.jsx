@@ -10,7 +10,7 @@ const StyledAside = styled.aside`
   position: sticky;
   /* justify-self: flex-end; */
   top: 2.2rem;
-  @media (max-width: 800px) {
+  @media (max-width: 640px) {
     display: none;
   }
 `
