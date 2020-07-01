@@ -7,13 +7,16 @@ const StyledLI = styled.li`
   display: flex;
   align-items: baseline;
   div.dash {
-    flex: 0 0 1rem;
+    flex: 0 0 0.5rem;
     margin-right: 10px;
+    @media (min-width: 640px) {
+      flex: 0 0 1rem;
+    }
     span {
       border-radius: 10px;
       background: var(--invert);
       display: inline-block;
-      width: 1rem;
+      width: 100%;
       height: 3px;
       vertical-align: middle;
     }

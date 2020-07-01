@@ -11,10 +11,10 @@ const headingSizes = {
 };
 
 const StyledH = styled.h1`
-  margin-top: ${({mt=false}) => mt && `${mt}rem`};
-  margin-bottom: ${({mb=false}) => mb && `${mb}rem`};
-  margin-left: ${({ml=false}) => ml && `${ml}rem`};
-  margin-right: ${({mr=false}) => mr && `${mr}rem`};
+  margin-top: ${({mv=false}) => mv && `${mv}rem`};
+  margin-bottom: ${({mv=false}) => mv && `${mv}rem`};
+  margin-left: ${({mh=false}) => mh && `${mh}rem`};
+  margin-right: ${({mh=false}) => mh && `${mh}rem`};
   /* Default h1 */
   font-size: ${headingSizes.h1}rem;
   /* Default allow to change */
@@ -22,6 +22,9 @@ const StyledH = styled.h1`
   /* If font size is passed */
   font-size: ${({ size }) => size && `${size}rem`};
   position: relative;
+  text-decoration: none;
+  color: var(--text-normal);
+  display: ${({inline}) => inline && "inline-block"};
   .autolink-anchor {
     margin-left: -23px;
     margin-right: 5px;
@@ -33,18 +36,15 @@ const StyledH = styled.h1`
       height: 18px;
     }
   }
-  &:hover .autolink-anchor {
-    opacity: 1;
-    svg {
-      stroke: var(--accent);
+  &:hover {
+    color: var(--text-normal);
+    .autolink-anchor {
+      opacity: 1;
+      svg {
+        stroke: var(--accent);
+      }
     }
   }
 `;
 
-export default function H(props) {
-  return (
-    <StyledH {...props}>
-      {props.children}
-    </StyledH>
-  );
-}
+export default StyledH

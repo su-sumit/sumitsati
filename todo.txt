@@ -5,3 +5,5 @@
 - background of pre tag
 - scroll for code and toc should be transparent and move the global scroll to body
 - replace unnecessary margin logic with spacer component
+- add total counts on category
+- links hover fix and redesign

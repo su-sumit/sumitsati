@@ -4,7 +4,7 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --black: hsl(225deg, 15%, 15%);
     --card-bg: #f7f7f7;
-    --dull: rgba(118, 126, 134, 0.7);
+    --dull: rgba(118, 126, 134, 0.96);
     --bg-dark: #171717;
     --bg: inherit;
     --light-gray: #f1f1f1;
@@ -27,11 +27,18 @@ const GlobalStyles = createGlobalStyle`
     
     /* scroll */
     scroll-behavior: smooth;
+
+    /* container padding */
+    --container-pad: 1rem;
+    @media (min-width: 640px) {
+      --container-pad: 1.5rem;
+    }
+
+    @media (min-width: 1080px) {
+      --container-pad: 2rem;
+    }
   }
 
-  /* pre.grvsc-container {
-    background-color: var(--card-bg);
-  } */
 
   body {
     margin: 0;
@@ -77,6 +84,8 @@ const GlobalStyles = createGlobalStyle`
     border: 2px solid #a9a9a914;
     background: var(--card-bg);
     text-transform: capitalize;
+    color: var(--text-normal);
+    text-decoration: none;
   }
 
   * {

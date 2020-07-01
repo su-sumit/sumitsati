@@ -80,9 +80,9 @@ const StyledInput = styled.input `
   }
 `
 
-const ToggleButton = ({toggle}) => (
+const ToggleButton = ({toggle, isOn}) => (
   <StyledSwitch>
-    <StyledInput type="checkbox" onChange={toggle}/>
+    <StyledInput type="checkbox" checked={isOn} onChange={toggle} />
     <div>
       <span></span>
     </div>

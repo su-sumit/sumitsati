@@ -9,16 +9,7 @@ import mdxComponents from "./mdxComponents"
 const StyledMainContainer = styled.div`
   max-width: 1100px;
   margin: 0 auto 4rem auto;
-  padding: 1rem;
-
-  @media (min-width: 640px) {
-    padding: 1.5rem;
-  }
-
-  @media (min-width: 1080px) {
-    padding: 2rem;
-  }
-
+  padding: var(--container-pad);
 `
 
 const Layout = ({ children }) => {

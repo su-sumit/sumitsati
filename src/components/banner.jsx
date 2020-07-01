@@ -8,30 +8,22 @@ import H from "./headings"
 
 const StyledBanner = styled.section`
   display: flex;
-  padding: 1.5rem 2rem;
-  margin: 0 -1rem;
+  padding: 1.5rem var(--container-pad);
+  margin: 0 calc(-1 * var(--container-pad));
   border-radius: 3px;
   min-height: 30vh;
   background: var(--card-bg);
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
   @media (min-width: 640px) {
-    margin: 0 -1.5rem;
-    padding: 1.5rem;
+    margin-bottom: 3rem;
   }
 
   @media (min-width: 1080px) {
-    padding: 2rem -2rem;
+    margin-bottom: 4rem;
   }
-`
-
-const StyledHeading = styled.h1`
-  flex: 1;
-  font-size: 2.5rem;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
 `
 
 const PostBanner = (props) => {

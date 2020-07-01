@@ -67,7 +67,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-page-progress",
       options: {
-        excludePaths: ["/", "/about"," /blog", "/uses"],
+        excludePaths: ["/", "/about"," /blog", "/uses", { regex: "^/category" }],
         height: 2,
         color: `var(--accent)`,
         footerHeight: 0,

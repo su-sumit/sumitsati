@@ -35,7 +35,7 @@ const StyledAside = styled.aside`
 const Index = (props) => {
   const { allMdx } = props.data
   const { group: categories } = props.data.categories
-  const posts = allMdx.edges.slice(1)
+  const posts = allMdx.edges
   return (
     <GridLayout>
       <>
@@ -52,7 +52,7 @@ const Index = (props) => {
             <strong>Categories</strong>
           </StyledSubHeader>
           <section>
-            {categories.map( ({fieldValue}) => <Pill key={fieldValue} category={fieldValue}/>)}
+            {categories.map(({fieldValue}) => <Pill key={fieldValue} category={fieldValue}/>)}
           </section>
         </StyledAside>
       </>

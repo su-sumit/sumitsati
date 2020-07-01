@@ -85,7 +85,7 @@ const Header = () => (
       <ThemeToggler>
         {
           ({theme, toggleTheme}) => (
-            <ToggleButton toggle={() => toggleTheme(theme === "dark" ? "light" : "dark"  )} />
+            <ToggleButton toggle={() => toggleTheme(theme === "dark" ? "light" : "dark"  )} isOn={theme === "dark"}/>
           )
         }
       </ThemeToggler>
