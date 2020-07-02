@@ -5,12 +5,17 @@ import styled from "styled-components"
 const StyledLink = styled((props) => <Link { ...props } />)`
   color: var(--text-normal);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: ${({size}) => size ?? 1}rem;
+  font-weight: ${({weight}) => weight ?? 400};
+  &:hover, &:hover * {
+    color: var(--accent);
+  }
 `
 
-const Heading = ({text, to}) => (
-  <StyledLink to={to}>
-    <h3>{text}</h3>
+const Heading = (props) => (
+  <StyledLink {...props}>
+    {/* <h3>{text}</h3> */}
+    {props.children}
   </StyledLink>
 )
 

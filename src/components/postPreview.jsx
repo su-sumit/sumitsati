@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-import Heading from "./blogHeading"
+import Link from "./blogHeading"
 import Pill from "./pill"
-import Link from "./link"
+import H from "./headings"
+// import Link from "./link"
 
 const StyledArticleWrapper = styled.article`
   display: inline-block;
@@ -23,7 +24,7 @@ const StyledExcerpt = styled.p`
 const StyledArticleTime = styled.time`
   font-size: 0.9rem;
   font-weight: normal;
-  color: var(--dull);
+  color: var(--gray-mid);
   font-weight: bold;
 `
 
@@ -43,11 +44,13 @@ const PostPreview = (props) => {
         <StyledArticleTime dateTime="2020-06-07">{date}</StyledArticleTime>
         <Pill category={category} />
       </StyledCardHeader>
-      <Heading text={title} to={fields.slug} />
+      <Link to={fields.slug}>
+        <H as="h2">{title}</H>
+      </Link>
       <StyledExcerpt>
         {excerpt}
       </StyledExcerpt>
-      <Link to={fields.slug}>
+      <Link to={fields.slug} weight={700}>
         Read more
       </Link>
     </StyledArticleWrapper>

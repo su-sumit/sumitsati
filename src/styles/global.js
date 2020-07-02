@@ -4,7 +4,6 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --black: hsl(225deg, 15%, 15%);
     --card-bg: #f7f7f7;
-    --dull: rgba(118, 126, 134, 0.96);
     --bg-dark: #171717;
     --bg: inherit;
     --light-gray: #f1f1f1;
@@ -16,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
     --slate: #f7f7f7;
     --overlay-dark: rgba(0,0,0,.2);
     --aqua: #5afff0;
+    --gray-mid: rgb(142, 142, 142);
 
     /* remark-vscode */
     --grvsc-border-radius: 3px;

@@ -52,34 +52,19 @@ const StyledLink = styled(props => <Link {...props} />)`
   position: relative;
 `
 
-// const StyledBox = styled.span`
-//   position: absolute;
-//   display: inline-block;
-//   width: 12px;
-//   height: 12px;
-//   background: rgba(35, 255, 204, 1);
-//   left: 0;
-//   z-index: -1;
-//   top: 0;
-//   transform: translate(-40%, -30%);
-// `
-
 const Header = () => (
   <StyledHeader>
     <Logo to="/">S</Logo>
     <StyledNav>
-      <StyledLink to="/">
+      {/* <StyledLink to="/">
         Blog
-        {/* <StyledBox></StyledBox> */}
       </StyledLink>
       <StyledLink to="/">
         Uses
-        {/* <StyledBox></StyledBox> */}
       </StyledLink>
       <StyledLink to="/">
         About
-        {/* <StyledBox></StyledBox> */}
-      </StyledLink>
+      </StyledLink> */}
     </StyledNav>
     <StyledNav>
       <ThemeToggler>

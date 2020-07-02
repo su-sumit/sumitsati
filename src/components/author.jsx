@@ -33,7 +33,7 @@ const StyledTime = styled.time`
 const StyledLabel = styled.div`
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--dull);
+  color: var(--gray-mid);
 `
 
 const Author = () => {

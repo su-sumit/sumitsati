@@ -7,8 +7,8 @@ import H from "../components/headings"
 import PostPreview from "../components/postPreview"
 
 const StyledLogo = styled.img`
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50px;
   margin-right: 1.5rem;
   @media (min-width: 640px) {
@@ -19,21 +19,24 @@ const StyledLogo = styled.img`
 const StyledHeader = styled.header`
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
   text-transform: capitalize;
   margin-top: 2rem;
+  flex-wrap: wrap;
   @media (min-width: 640px) {
     margin-top: 3rem;
+    margin-bottom: 1.5rem;
   }
 `
 const StyledArticleCounts = styled.div`
   font-size: 1.3rem;
-  color: var(--dull);
+  color: var(--gray-mid);
   margin-left: auto;
-  font-size: 1rem;
   font-weight: bold;
+  flex: 0 0 100%;
+  margin: 1.5rem 0 0.5rem 0;
   @media (min-width: 640px) {
-    font-size: 1.3rem;
+    flex: initial;
+    margin: 0 0 0 auto;
   }
 `
 

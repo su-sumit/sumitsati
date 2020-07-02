@@ -11,10 +11,9 @@ import LI from "./li"
 export default {
   p: P,
   pre: Pre,
+  a: A,
   code: Code,
   inlineCode: Code,
-  a: A,
-  a: A,
   ul: UL,
   li: LI,
   h1: props => <H as="h1" {...props} />,
