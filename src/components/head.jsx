@@ -55,6 +55,7 @@ export default function Head(props) {
       <meta property="og:image:height" content="630" /> */}
       <meta property="og:locale" content="en_IN" />
       <title>{title} ~ Sumit Sati</title>
+      <meta name="description" content={description}></meta>
     </Helmet>
   )
 }
