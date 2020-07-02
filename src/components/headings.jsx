@@ -11,10 +11,10 @@ const headingSizes = {
 };
 
 const StyledH = styled.h1`
-  margin-top: ${({mv=false}) => mv && `${mv}rem`};
-  margin-bottom: ${({mv=false}) => mv && `${mv}rem`};
-  margin-left: ${({mh=false}) => mh && `${mh}rem`};
-  margin-right: ${({mh=false}) => mh && `${mh}rem`};
+  margin-top: ${({mt=false}) => mt && `${mt}rem`};
+  margin-bottom: ${({mb=false}) => mb && `${mb}rem`};
+  margin-left: ${({ml=false}) => ml && `${ml}rem`};
+  margin-right: ${({mr=false}) => mr && `${mr}rem`};
   /* Default h1 */
   font-size: ${headingSizes.h1}rem;
   /* Default allow to change */

@@ -59,7 +59,7 @@ export default function Categories({ pageContext, data }) {
     <>
       <StyledHeader>
         <StyledLogo src={logo} alt="logo" />
-        <H inline={true} mv={0}>
+        <H inline={true} mt={0} mb={0}>
           {label}
         </H>
         <StyledArticleCounts>{`${totalCount} Post${totalCount > 1 ? 's' : ''}`}</StyledArticleCounts>

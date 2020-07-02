@@ -11,7 +11,7 @@ const StyledBanner = styled.section`
   padding: 1.5rem var(--container-pad);
   margin: 0 calc(-1 * var(--container-pad));
   border-radius: 3px;
-  min-height: 30vh;
+  min-height: 35vh;
   background: var(--card-bg);
   margin-bottom: 2rem;
   justify-content: center;
@@ -19,6 +19,7 @@ const StyledBanner = styled.section`
   flex-direction: column;
   @media (min-width: 640px) {
     margin-bottom: 3rem;
+    padding: 1.8rem var(--container-pad);
   }
 
   @media (min-width: 1080px) {
@@ -31,7 +32,7 @@ const PostBanner = (props) => {
 
   return (
     <StyledBanner category={category}>
-      <H size={2.5}>{title}</H>
+      <H size={2.5} mt={0}>{title}</H>
       <div>
         <Pill category={category} />
       </div>
