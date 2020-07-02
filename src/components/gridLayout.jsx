@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const StyledLayout = styled.div`
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem 7rem;
