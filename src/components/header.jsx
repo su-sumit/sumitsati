@@ -13,6 +13,11 @@ const Logo = styled(props => <Link {...props} />)`
   color: var(--text-normal);
   padding: 3px 7px;
   line-height: 1.6rem;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const StyledHeader = styled.header`

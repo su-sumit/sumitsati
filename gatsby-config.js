@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Sumit Sati`,
-    description: `kciK ffo ruoy, txen taerg ybstaG tcejorp htiw siht tluafed retrats. sihT senoberab retrats spihs htiw eht niam ybstaG noitarugifnoc selif uoy thgim deen`,
-    author: `@myDad`,
+    description: `Personal website of Sumit Sati`,
+    author: `@Sumit Sati`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,7 +16,7 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
         path: `${__dirname}/content/`,
@@ -71,6 +71,12 @@ module.exports = {
         height: 2,
         color: `var(--accent)`,
         footerHeight: 0,
+      }
+    },
+    {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        cachePublic: true
       }
     },
     `gatsby-plugin-styled-components`,

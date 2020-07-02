@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Helmet } from "react-helmet"
 
 import PostPreview from "../components/postPreview"
 import Pill from "../components/pill"
@@ -38,6 +39,10 @@ const Index = (props) => {
   const posts = allMdx.edges
   return (
     <GridLayout>
+      <Helmet
+        htmlAttributes={{ lang: 'en' }}
+        title="Sumit Sati"
+      />
       <>
         <StyledPostsList>
           <StyledSubHeader>

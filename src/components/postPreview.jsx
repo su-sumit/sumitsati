@@ -4,7 +4,6 @@ import styled from "styled-components"
 import Link from "./blogHeading"
 import Pill from "./pill"
 import H from "./headings"
-// import Link from "./link"
 
 const StyledArticleWrapper = styled.article`
   display: inline-block;
