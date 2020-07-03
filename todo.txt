@@ -8,3 +8,4 @@
 - add total counts on category
 - links hover fix and redesign
 - multi tags selection
+- add footer

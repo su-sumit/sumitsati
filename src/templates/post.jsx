@@ -3,31 +3,28 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 
+import Head from "../components/head"
 import GridLayout from "../components/gridLayout"
 import TableOfContents from "../components/tableOfContent"
 import PostBanner from "../components/banner"
 
-// const StyledWrapper = styled.main`
-//   font-family: inherit;
-//   margin: 0 auto;
-//   padding: 1rem;
-// `
+
 const StyledWrapper = styled.main`
   grid-area: main;
   line-height: 1.3;
   font-size: 1.25rem;
   letter-spacing: 0.02rem;
-  /* overflow-x: auto; */
 `
 
 const components = {
   wrapper: StyledWrapper
 }
 
-export default function Post({data}) {
+export default function Post({data, pageContext}) {
   const { body, tableOfContents, frontmatter } = data.mdx
   return (
     <>
+      <Head slug={pageContext.slug} {...frontmatter} />
       <PostBanner {...frontmatter} />
       <GridLayout isMdx={true} >
         <MDXRenderer components={components}>

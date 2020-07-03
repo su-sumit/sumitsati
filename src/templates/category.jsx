@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
+import Head from "../components/head"
 import categoriesMeta from "../utils/categoriesMeta"
 import H from "../components/headings"
 import PostPreview from "../components/postPreview"
@@ -49,14 +50,20 @@ const TwoColGrid = styled.main`
   }
 `
 
-export default function Categories({ pageContext, data }) {
+export default function Categories(props) {
+  const { pageContext, data } = props
   const { category } = pageContext
   const { edges, totalCount } = data.allMdx
-
   const {label, logo} = categoriesMeta(category)
+  const metaData = {
+    title: category,
+    description: `${category} articles by sumit sati`,
+    slug: pageContext.path
+  }
 
   return (
     <>
+      <Head {...metaData} />
       <StyledHeader>
         <StyledLogo src={logo} alt="logo" />
         <H inline={true} mt={0} mb={0}>

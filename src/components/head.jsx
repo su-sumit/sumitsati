@@ -20,15 +20,15 @@ export default function Head(props) {
 
   const title = props?.title ?? defaultMetaData.title
   const description = props?.description ?? props?.excerpt ?? defaultMetaData.description
-  const canonical = `${BASE_URL}/${props.slug ?? useLocation().pathname}`
-  const url = `${BASE_URL}/${props.slug ?? useLocation().pathname}`
+  const url = `${BASE_URL}${props.slug ?? useLocation().pathname}`
+  const ogImage = "/images/favicon-32x32.png"
 
   
   return (
     <Helmet>
       <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
       <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
-      <link rel="canonical" href={canonical} />
+      <link rel="canonical" href={url} />
       <meta name="theme-color" content="#000"></meta>
       <meta name="generator" content="Sumit Sati on Gatsby!" />
       <meta name="twitter:card" content="summary" />
@@ -37,7 +37,7 @@ export default function Head(props) {
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      {/* <meta name="twitter:image" content={ogImage} />  */}
+      <meta name="twitter:image" content={ogImage} /> 
       <meta property="og:type" content="article" />
       <meta property="og:title" content={title} />
       <meta property="og:url" content={url} />
@@ -45,16 +45,16 @@ export default function Head(props) {
       {props.date ? (
         <meta
           property="article:published_time"
-          content={new Date(post.frontmatter.date).toISOString()}
+          content={new Date(props.date).toISOString()}
         />
       ) : null}
 
       <meta property="og:site_name" content="Sumit Sati" />
-      {/* <meta property="og:image" content={ogImage} /> */}
-      {/* <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" /> */}
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:locale" content="en_IN" />
-      <title>{title} ~ Sumit Sati</title>
+      <title>{title} - Sumit Sati</title>
       <meta name="description" content={description}></meta>
     </Helmet>
   )

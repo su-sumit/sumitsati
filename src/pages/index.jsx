@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Helmet } from "react-helmet"
 
+import Head from "../components/head"
 import PostPreview from "../components/postPreview"
 import Pill from "../components/pill"
 import GridLayout from "../components/gridLayout"
@@ -39,6 +40,7 @@ const Index = (props) => {
   const posts = allMdx.edges
   return (
     <GridLayout>
+      <Head />
       <Helmet
         htmlAttributes={{ lang: 'en' }}
         title="Sumit Sati"
