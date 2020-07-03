@@ -21,7 +21,7 @@ export default function Head(props) {
   const title = props?.title ?? defaultMetaData.title
   const description = props?.description ?? props?.excerpt ?? defaultMetaData.description
   const url = `${BASE_URL}${props.slug ?? useLocation().pathname}`
-  const ogImage = "/images/favicon-32x32.png"
+  const ogImage = `${BASE_URL}/images/favicon-32x32.png`
 
   
   return (
