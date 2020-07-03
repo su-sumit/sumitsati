@@ -24,7 +24,7 @@ const StyledH = styled.h1`
   position: relative;
   text-decoration: none;
   color: var(--text-normal);
-  display: ${({inline}) => inline && "inline-block"};
+  display: inline-flex;
   .autolink-anchor {
     margin-left: -23px;
     margin-right: 5px;
@@ -34,6 +34,10 @@ const StyledH = styled.h1`
     svg {
       width: 18px;
       height: 18px;
+    }
+    @media (max-width: 640px) {
+      order: 1;
+      margin-left: 5px;
     }
   }
   &:hover {

@@ -1,11 +1,7 @@
 - create a width wrapper
 - move all headings to wesbos style component
-- nest css styled component
-- smooth scroll
-- background of pre tag
-- scroll for code and toc should be transparent and move the global scroll to body
 - replace unnecessary margin logic with spacer component
 - add total counts on category
-- links hover fix and redesign
 - multi tags selection
 - add footer
+- create icon as svg
