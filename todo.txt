@@ -1,3 +1,5 @@
+- authentication for admin preview site on netlify
+- google analytics (Priority)
 - create a width wrapper
 - move all headings to wesbos style component
 - replace unnecessary margin logic with spacer component
@@ -10,6 +12,5 @@
 - landing page
 - move blog page to /blog
 - create page for uses
-- authentication for admin preview site on netlify
-- google analytics (Priority)
 - analytics dashboard
+- 404 page
