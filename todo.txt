@@ -5,3 +5,11 @@
 - multi tags selection
 - add footer
 - create icon as svg
+- social links
+- recent tweets selection
+- landing page
+- move blog page to /blog
+- create page for uses
+- authentication for admin preview site on netlify
+- google analytics (Priority)
+- analytics dashboard
