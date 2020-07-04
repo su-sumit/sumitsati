@@ -1,7 +1,9 @@
 - authentication for admin preview site on netlify
 - google analytics (Priority)
+- footer
 - create a width wrapper
 - move all headings to wesbos style component
+- add file name headers for codeblocks
 - replace unnecessary margin logic with spacer component
 - add total counts on category
 - multi tags selection

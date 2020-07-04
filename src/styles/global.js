@@ -37,6 +37,9 @@ const GlobalStyles = createGlobalStyle`
     @media (min-width: 1080px) {
       --container-pad: 2rem;
     }
+
+    /* transitions */
+    --sooth: cubic-bezier(1, 0.74, 0.49, 0.77)
   }
 
 
@@ -47,7 +50,7 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background: var(--bg);
     letter-spacing: 0.025rem;
-    transition: background 300ms cubic-bezier(1, 0.74, 0.49, 0.77); 
+    transition: background 300ms var(--sooth); 
 
     &.light {
       --textTitle: var(--black);

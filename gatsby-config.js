@@ -79,6 +79,14 @@ module.exports = {
         cachePublic: true
       }
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-dark-mode`,
     `gatsby-remark-smartypants`,

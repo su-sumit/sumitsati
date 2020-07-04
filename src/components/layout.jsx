@@ -5,6 +5,7 @@ import { MDXProvider } from '@mdx-js/react'
 // import Head from "./head"
 import GlobalStyles from "../styles/global"
 import Header from "./header"
+import Footer from "./footer"
 import mdxComponents from "./mdxComponents"
 
 const StyledMainContainer = styled.div`
@@ -24,6 +25,7 @@ const Layout = ({ children }) => {
           {children}
         </StyledMainContainer>
       </MDXProvider>
+      <Footer />
     </>
   )
 }
