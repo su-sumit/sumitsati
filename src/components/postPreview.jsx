@@ -14,7 +14,6 @@ const StyledArticle = styled.article`
   margin-bottom: 1.5rem;
   text-decoration: none;
   color: var(--text-normal);
-  /* border-bottom: 2px solid transparent; */
   cursor: pointer;
   transition: transform 0.25s var(--lift) 0s;;
   @media (min-width: 800px) {
@@ -30,13 +29,16 @@ const StyledArticle = styled.article`
     }
   }
 
+  .bullet {
+    margin: 0 6px;
+  }
 `
 
 const StyledExcerpt = styled.p`
   color: var(--text-normal);
 `
 
-const StyledArticleTime = styled.time`
+const StyledArticleTime = styled.div`
   font-size: 0.9rem;
   font-weight: normal;
   color: var(--gray-mid);
@@ -51,7 +53,7 @@ const StyledCardHeader = styled.header`
 `
 
 const PostPreview = (props) => {
-  const {fields, frontmatter} = props;
+  const {fields, frontmatter, timeToRead} = props;
   const {date, excerpt, category, title} = frontmatter;
 
   const navigateToArticle = (e) => {
@@ -62,7 +64,11 @@ const PostPreview = (props) => {
   return (
     <StyledArticle onClick={navigateToArticle}>
       <StyledCardHeader>
-        <StyledArticleTime dateTime="2020-06-07">{date}</StyledArticleTime>
+        <StyledArticleTime dateTime="2020-06-07">
+          <span>{date}</span>
+          <span className="bullet">&bull;</span>
+          <span>{`${timeToRead} min read`}</span>
+        </StyledArticleTime>
         <Pill category={category} />
       </StyledCardHeader>
       <H as="h2" className="article-title">{title}</H>

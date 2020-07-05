@@ -1,4 +1,3 @@
-- readtime
 - authentication for admin preview site on netlify
 - google analytics
 - create a width wrapper
