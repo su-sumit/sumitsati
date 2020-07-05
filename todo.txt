@@ -1,8 +1,5 @@
-- readtime
 - authentication for admin preview site on netlify
-- google analytics
 - create a width wrapper
-- move all headings to wesbos style component
 - add file name headers for codeblocks
 - replace unnecessary margin logic with spacer component
 - add total counts on category
@@ -13,6 +10,5 @@
 - landing page
 - move blog page to /blog
 - create page for uses
-- analytics dashboard
 - 404 page
  

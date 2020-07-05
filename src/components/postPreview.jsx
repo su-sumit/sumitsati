@@ -50,7 +50,8 @@ const StyledCardHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
 `
 
 const PostPreview = (props) => {
@@ -65,8 +66,8 @@ const PostPreview = (props) => {
   return (
     <StyledArticle onClick={navigateToArticle}>
       <StyledCardHeader>
-        <StyledArticleTime dateTime="2020-06-07">
-          <span>{date}</span>
+        <StyledArticleTime>
+          <time dateTime={date}>{date}</time>
           <span className="bullet">&bull;</span>
           <span>{`${timeToRead} min read`}</span>
         </StyledArticleTime>

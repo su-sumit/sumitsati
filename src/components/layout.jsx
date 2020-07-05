@@ -12,6 +12,7 @@ const StyledMainContainer = styled.div`
   max-width: 1100px;
   margin: 0 auto 4rem auto;
   padding: var(--container-pad);
+  min-height: 100vh;
 `
 
 const Layout = ({ children }) => {

@@ -61,7 +61,7 @@ export default function Footer () {
   return (
     <StyledFooter>
       <section className="content">
-        <div>Designed and developed by <strong>Sumit Sati</strong></div>
+        <div>Designed and Developed by <strong>Sumit Sati</strong></div>
         <div>
           <a href="https://www.gatsbyjs.org/" target="_"><img className="logo gatbsy" src="/images/gatsby.png" alt="gatsby logo"/></a> | <a href="https://www.netlify.com" target="_"><img className="logo netlify" src="/images/netlify.png" alt="netlify logo" /></a></div>
       </section>
