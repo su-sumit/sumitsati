@@ -32,6 +32,7 @@ const StyledArticle = styled.article`
   .bullet {
     margin: 0 6px;
   }
+
 `
 
 const StyledExcerpt = styled.p`
