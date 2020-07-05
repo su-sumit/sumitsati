@@ -49,7 +49,7 @@ const StyledFooter = styled.footer`
       height: 25px;
       margin: 0 1rem;
       fill: var(--invert);
-      transition: fill 300ms var(--sooth);
+      transition: fill 300ms var(--smooth);
     }
     &:hover svg {
       fill: var(--accent);
@@ -63,17 +63,17 @@ export default function Footer () {
       <section className="content">
         <div>Designed and developed by <strong>Sumit Sati</strong></div>
         <div>
-          <a href="https://www.gatsby.com" target="_"><img className="logo gatbsy" src="/images/gatsby.png" alt="gatsby logo"/></a> | <a href="https://www.netlify.com" target="_"><img className="logo netlify" src="/images/netlify.png" alt="netlify logo" /></a></div>
+          <a href="https://www.gatsbyjs.org/" target="_"><img className="logo gatbsy" src="/images/gatsby.png" alt="gatsby logo"/></a> | <a href="https://www.netlify.com" target="_"><img className="logo netlify" src="/images/netlify.png" alt="netlify logo" /></a></div>
       </section>
       <section className="social">
-        <a href="" target="_">
-          <Instagram />
-        </a>
         <a href="" target="_">
           <Twitter />
         </a>
         <a href="" target="_">
           <Github />
+        </a>
+        <a href="" target="_">
+          <Instagram />
         </a>
       </section>
     </StyledFooter>

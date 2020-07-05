@@ -39,7 +39,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
     /* transitions */
-    --sooth: cubic-bezier(1, 0.74, 0.49, 0.77)
+    --smooth: cubic-bezier(1, 0.74, 0.49, 0.77);
+    --lift: cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
 
@@ -50,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background: var(--bg);
     letter-spacing: 0.025rem;
-    transition: background 300ms var(--sooth); 
+    transition: background 300ms var(--smooth); 
 
     &.light {
       --textTitle: var(--black);
