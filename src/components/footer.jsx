@@ -16,6 +16,8 @@ const StyledFooter = styled.footer`
   padding: 0.9rem 1rem;
   margin: 0 auto;
   flex-wrap: wrap-reverse;
+  line-height: 1.7;
+  letter-spacing: 0.04rem;
   @media (min-width: 640px) {
     min-height: 80px;
     justify-content: space-between;
@@ -33,6 +35,10 @@ const StyledFooter = styled.footer`
     order: 1;
     &.social {
       order: 2;
+    }
+    &.content img {
+      max-width: 15px;
+      vertical-align: middle;
     }
   }
   a {
@@ -52,17 +58,19 @@ const StyledFooter = styled.footer`
 export default function Footer () {
   return (
     <StyledFooter>
-      <section>
-        <div>Copyright © 2020-present Sumit Sati</div>
+      <section className="content">
+        <div>Designed and developed by <strong>Sumit Sati</strong></div>
+        <div>
+          <a href="https://www.gatsby.com" target="_"><img className="logo gatbsy" src="/images/gatsby.png" alt="gatsby logo"/></a> | <a href="https://www.netlify.com" target="_"><img className="logo netlify" src="/images/netlify.png" alt="netlify logo" /></a></div>
       </section>
       <section className="social">
-        <a href="">
+        <a href="" target="_">
           <Instagram />
         </a>
-        <a href="">
+        <a href="" target="_">
           <Twitter />
         </a>
-        <a href="">
+        <a href="" target="_">
           <Github />
         </a>
       </section>
