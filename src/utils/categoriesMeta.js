@@ -4,12 +4,13 @@ const textMap = {
   react: "react",
   next: "next",
   node: "node",
-  aws: "aws",
+  aws: "AWS",
 }
 
 export default function(category) {
+  const toLow = category.toLowerCase()
   return {
-    label: textMap[category],
-    logo: `/images/svg/${category}.svg`
+    label: textMap[toLow],
+    logo: `/images/svg/${toLow}.svg`
   }
 }

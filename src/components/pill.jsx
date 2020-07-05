@@ -4,15 +4,6 @@ import { Link } from "gatsby"
 
 import categoriesMeta from "../utils/categoriesMeta"
 
-const textMap = {
-  ml: "machine learning",
-  javascript: "javascript",
-  react: "react",
-  next: "next",
-  node: "node",
-  aws: "aws",
-}
-
 const StyledImage = styled.div`
   width: 20px;
   height: 20px;

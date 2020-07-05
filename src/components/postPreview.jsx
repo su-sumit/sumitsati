@@ -1,19 +1,35 @@
 import React from "react"
 import styled from "styled-components"
+import { navigate } from "gatsby"
 
-import Link from "./blogHeading"
+// import Link from "./blogHeading"
 import Pill from "./pill"
 import H from "./headings"
 
-const StyledArticleWrapper = styled.article`
+const StyledArticle = styled.article`
   display: inline-block;
   padding: 1.5rem 1rem;
   border-radius: 3px;
   background: var(--card-bg);
   margin-bottom: 1.5rem;
+  text-decoration: none;
+  color: var(--text-normal);
+  /* border-bottom: 2px solid transparent; */
+  cursor: pointer;
+  transition: transform 0.25s var(--lift) 0s;;
   @media (min-width: 800px) {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
+    &:hover {
+      /* border-color: var(--accent); */
+      transform: translateY(-3px);
+    }
   }
+  &:hover {
+    .article-title {
+      color: var(--accent);
+    }
+  }
+
 `
 
 const StyledExcerpt = styled.p`
@@ -37,22 +53,26 @@ const StyledCardHeader = styled.header`
 const PostPreview = (props) => {
   const {fields, frontmatter} = props;
   const {date, excerpt, category, title} = frontmatter;
+
+  const navigateToArticle = (e) => {
+    e.preventDefault()
+    navigate(fields.slug)
+  }
+
   return (
-    <StyledArticleWrapper>
+    <StyledArticle onClick={navigateToArticle}>
       <StyledCardHeader>
         <StyledArticleTime dateTime="2020-06-07">{date}</StyledArticleTime>
         <Pill category={category} />
       </StyledCardHeader>
-      <Link to={fields.slug}>
-        <H as="h2">{title}</H>
-      </Link>
+      <H as="h2" className="article-title">{title}</H>
       <StyledExcerpt>
         {excerpt}
       </StyledExcerpt>
-      <Link to={fields.slug} weight={700}>
+      {/* <Link to={fields.slug} weight={700}>
         Read more
-      </Link>
-    </StyledArticleWrapper>
+      </Link> */}
+    </StyledArticle>
   )
 }
 
