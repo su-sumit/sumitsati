@@ -87,6 +87,12 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-dark-mode`,
     `gatsby-remark-smartypants`,
