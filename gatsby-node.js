@@ -6,6 +6,7 @@ exports.onCreateNode = ({node, actions, getNode}) => {
   if(node.internal.type === "Mdx") {
     const fileNameSlug = createFilePath({ node, getNode });
     const { slug } = node.frontmatter
+    console.log("slug", slug, fileNameSlug)
 
     // create slug
     actions.createNodeField({
