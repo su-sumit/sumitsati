@@ -3,8 +3,6 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useLocation } from "@reach/router"
 
-import defaultOGImage from "/images/favicon-32x32.png"
-
 const BASE_URL = "https://sumitsati.netlify.app"
 
 export default function Head(props) {
@@ -23,6 +21,8 @@ export default function Head(props) {
   const title = props?.title ?? defaultMetaData.title
   const description = props?.description ?? props?.excerpt ?? defaultMetaData.description
   const url = `${BASE_URL}${props.slug ?? useLocation().pathname}`
+  const ogImage = `${BASE_URL}/images/favicon-32x32.png`
+
   
   return (
     <Helmet>
@@ -37,7 +37,7 @@ export default function Head(props) {
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={defaultOGImage} /> 
+      <meta name="twitter:image" content={ogImage} /> 
       <meta property="og:type" content="article" />
       <meta property="og:title" content={title} />
       <meta property="og:url" content={url} />
@@ -50,7 +50,7 @@ export default function Head(props) {
       ) : null}
 
       <meta property="og:site_name" content="Sumit Sati" />
-      <meta property="og:image" content={defaultOGImage} />
+      <meta property="og:image" content={ogImage} />
       {/* <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" /> */}
       <meta property="og:locale" content="en_IN" />
