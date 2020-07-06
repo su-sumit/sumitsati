@@ -27,7 +27,7 @@ const StyledHeader = styled.header`
   align-items: center;
   grid-gap: 2rem;
   padding: 0.9rem 1rem;
-  max-width: 1100px;
+  max-width: var(--container-width);
   margin: 0 auto;
 
   @media (min-width: 640px) {

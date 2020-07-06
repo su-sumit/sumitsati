@@ -29,8 +29,9 @@ const GlobalStyles = createGlobalStyle`
     /* scroll */
     scroll-behavior: smooth;
 
-    /* container padding */
+    /* container */
     --container-pad: 1rem;
+    --container-width: 1200px;
     @media (min-width: 640px) {
       --container-pad: 1.5rem;
     }
