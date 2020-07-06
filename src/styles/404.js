@@ -16,6 +16,7 @@ const Styled404 = createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex-direction: column;
     color: white;
     padding: 2rem 1rem;
@@ -30,7 +31,6 @@ const Styled404 = createGlobalStyle`
     font-weight: 900;
     display: inline-block;
     letter-spacing: 1rem;
-    text-align: center;
     @media (min-width: 640px) {
       letter-spacing: 2rem;
     }
