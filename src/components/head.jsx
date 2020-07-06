@@ -22,7 +22,7 @@ export default function Head(props) {
 
   const title = props?.title ?? defaultMetaData.title
   const description = props?.description ?? props?.excerpt ?? defaultMetaData.description
-  const url = `${BASE_URL}${props.slug ?? useLocation().pathname}`\
+  const url = `${BASE_URL}${props.slug ?? useLocation().pathname}`
   
   return (
     <Helmet>
