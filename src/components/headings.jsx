@@ -24,7 +24,7 @@ const StyledH = styled.h1`
   position: relative;
   text-decoration: none;
   color: var(--text-normal);
-  display: inline-flex;
+  display: ${({inline}) => inline ? 'inline-flex' : 'block'};
   .autolink-anchor {
     margin-left: -23px;
     margin-right: 5px;

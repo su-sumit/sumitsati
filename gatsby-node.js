@@ -2,10 +2,16 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const path = require('path');
 const kebabCase = require('lodash.kebabcase')
 
+const isProd = process.env.NODE_ENV === "production"
+
 exports.onCreateNode = ({node, actions, getNode}) => {
   if(node.internal.type === "Mdx") {
     const fileNameSlug = createFilePath({ node, getNode });
-    const { slug } = node.frontmatter
+    const { slug, isPublished } = node.frontmatter
+
+    if( isProd && !isPublished) {
+      return
+    }
 
     // create slug
     actions.createNodeField({
@@ -43,13 +49,15 @@ exports.createPages = async ({graphql, actions}) => {
   }
   
   result.data.allMdx.edges.forEach(({node}) => {
-    actions.createPage({
-      path: kebabCase(node.fields.slug),
-      component: path.resolve("./src/templates/post.jsx"),
-      context: {
-        slug: node.fields.slug
-      }
-    })
+    if(node.fields) {
+      actions.createPage({
+        path: node.fields.slug,
+        component: path.resolve("./src/templates/post.jsx"),
+        context: {
+          slug: node.fields.slug
+        }
+      })
+    }
   })
 
   // Extract tag data from query
@@ -64,4 +72,16 @@ exports.createPages = async ({graphql, actions}) => {
       },
     })
   })
+}
+
+const shouldInclude = (path) => {
+  const pathsToIgnore = ['/preview']
+  return pathsToIgnore.every(ignoredPath => path.includes(ignoredPath))
+} 
+
+exports.onCreatePage = async({page, actions}) => {
+  const { deletePage } = actions
+  if (isProd && shouldInclude(page.path)) {
+    deletePage(page)
+  }
 }

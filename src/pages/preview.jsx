@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 
-import Head from "../components/head"
 import PostPreview from "../components/postPreview"
 import Pill from "../components/pill"
 import GridLayout from "../components/gridLayout"
@@ -35,16 +34,15 @@ const StyledAside = styled.aside`
   /* grid-template-areas: "header" "content"; */
 `
 
-const Index = (props) => {
+const Preview = (props) => {
   const { allMdx } = props.data
   const { group: categories } = props.data.categories
   const posts = allMdx.edges
   return (
     <GridLayout>
-      <Head />
       <Helmet
         htmlAttributes={{ lang: 'en' }}
-        title="Sumit Sati"
+        title="Sumit Sati | preview"
       />
       <>
         <StyledPostsList>
@@ -69,8 +67,8 @@ const Index = (props) => {
 }
 
 export const pageQuery = graphql`
-  query posts {
-    allMdx(filter: {frontmatter: {isPublished: {eq: true}}}, sort: {order: ASC, fields: frontmatter___date}) {
+  query previewPosts {
+    allMdx(filter: {frontmatter: {isPublished: {eq: false}}}, sort: {order: ASC, fields: frontmatter___date}) {
       edges {
         node {
           id
@@ -96,4 +94,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default Index
+export default Preview

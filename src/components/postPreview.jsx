@@ -7,7 +7,7 @@ import Pill from "./pill"
 import H from "./headings"
 
 const StyledArticle = styled.article`
-  display: inline-block;
+  display: block;
   padding: 1.5rem 1rem;
   border-radius: 3px;
   background: var(--card-bg);
@@ -15,7 +15,8 @@ const StyledArticle = styled.article`
   text-decoration: none;
   color: var(--text-normal);
   cursor: pointer;
-  transition: transform 0.25s var(--lift) 0s;;
+  transition: transform 0.25s var(--lift) 0s;
+  min-height: 200px;
   @media (min-width: 800px) {
     margin-bottom: 2rem;
     &:hover {

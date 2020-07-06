@@ -1,0 +1,18 @@
+{
+	"frontmatter": {
+		"prefix": "fm",
+		"body": [
+			"---",
+			"title: ",
+			"date: 'YYYY-MM-DD'",
+			"excerpt: ",
+			"category: ",
+			"slug: ",
+			"isPublished: false",
+			"tags: ",
+			"  - javascript",
+			"---"
+		],
+		"description": "add frontmatter to mdx files"
+	}
+}
