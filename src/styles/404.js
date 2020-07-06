@@ -6,9 +6,11 @@ const Styled404 = createGlobalStyle`
       50%{transform: rotate(-5deg)}
       100%{transform: rotate(10deg);}
   }
+
   body {
     background: black;
   }
+
   .wrapper {
     height: 100vh;
     display: flex;
@@ -16,6 +18,7 @@ const Styled404 = createGlobalStyle`
     align-items: center;
     flex-direction: column;
     color: white;
+    padding: 2rem 1rem;
   }
 
   .shit-happens {
@@ -26,7 +29,11 @@ const Styled404 = createGlobalStyle`
     font-size: 30vw; 
     font-weight: 900;
     display: inline-block;
-    letter-spacing: 2rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    @media (min-width: 640px) {
+      letter-spacing: 2rem;
+    }
     span {
       display: inline-block;
       transform-origin: top;

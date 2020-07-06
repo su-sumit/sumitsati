@@ -9,10 +9,9 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
   border-top: 1px solid var(--accent);
   min-height: 100px;
-  max-width: 1100px;
+  max-width: var(--container-width);
   padding: 0.9rem 1rem;
   margin: 0 auto;
   flex-wrap: wrap-reverse;
