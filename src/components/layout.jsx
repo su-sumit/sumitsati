@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react'
 
 // import Head from "./head"
 import GlobalStyles from "../styles/global"
-import Fonts from "../styles/fonts"
+// import Fonts from "../styles/fonts"
 import Header from "./header"
 import Footer from "./footer"
 import mdxComponents from "./mdxComponents"
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
   return (
     <>
       {/* <Head /> */}
-      <Fonts />
+      {/* <Fonts /> */}
       <GlobalStyles />
       <Header />
       <MDXProvider components={mdxComponents}>
