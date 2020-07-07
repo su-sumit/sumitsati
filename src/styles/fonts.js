@@ -4,6 +4,7 @@ const Fonts = createGlobalStyle`
   @font-face {
     font-family: 'Roboto';
     font-style: normal;
+    font-display: fallback;
     font-weight: 100;
     src:
       local('Roboto Thin '),
@@ -28,6 +29,7 @@ const Fonts = createGlobalStyle`
   @font-face {
     font-family: 'Roboto';
     font-style: normal;
+    font-display: fallback;
     font-weight: 300;
     src:
       local('Roboto Light '),
@@ -52,6 +54,7 @@ const Fonts = createGlobalStyle`
   @font-face {
     font-family: 'Roboto';
     font-style: normal;
+    font-display: fallback;
     font-weight: 400;
     src:
       local('Roboto Regular '),
@@ -76,6 +79,7 @@ const Fonts = createGlobalStyle`
   @font-face {
     font-family: 'Roboto';
     font-style: normal;
+    font-display: fallback;
     font-weight: 500;
     src:
       local('Roboto Medium '),
@@ -100,6 +104,7 @@ const Fonts = createGlobalStyle`
   @font-face {
     font-family: 'Roboto';
     font-style: normal;
+    font-display: fallback;
     font-weight: 700;
     src:
       local('Roboto Bold '),
@@ -124,6 +129,7 @@ const Fonts = createGlobalStyle`
   @font-face {
     font-family: 'Roboto';
     font-style: normal;
+    font-display: fallback;
     font-weight: 900;
     src:
       local('Roboto Black '),
