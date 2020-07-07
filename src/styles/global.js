@@ -49,7 +49,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     font-size: 1rem;
-    font-family: roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     background: var(--bg);
     letter-spacing: 0.025rem;
