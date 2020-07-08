@@ -25,6 +25,14 @@ const StyledBanner = styled.section`
   @media (min-width: 1080px) {
     margin-bottom: 4rem;
   }
+
+  > h1 {
+    flex: 1;
+  }
+
+  > * {
+    flex: 1;
+  }
 `
 
 const PostBanner = (props) => {
@@ -35,8 +43,8 @@ const PostBanner = (props) => {
       <H size={2.5} mt={0}>{title}</H>
       <div>
         <Pill category={category} />
+        <Spacer height={15} />
       </div>
-      <Spacer height={20} />
       <Author />
     </StyledBanner>
   )
