@@ -52,7 +52,7 @@ exports.createPages = async ({graphql, actions}) => {
   }
   
   result.data.allMdx.edges
-    .filter(node => isProd ? node.frontmatter.isPublished : true)
+    .filter(({node}) => isProd ? node.frontmatter.isPublished : true)
     .forEach(({node}) => {
       if(node.fields) {
         actions.createPage({
