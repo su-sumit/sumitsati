@@ -5,6 +5,7 @@ const textMap = {
   next: "next",
   node: "node",
   aws: "AWS",
+  dsa: "DSA",
 }
 
 export default function(category) {

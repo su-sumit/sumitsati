@@ -31,7 +31,7 @@ const StyledBanner = styled.section`
   }
 
   > * {
-    flex: 1;
+    flex: 0.5;
   }
 `
 

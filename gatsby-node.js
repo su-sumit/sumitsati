@@ -31,6 +31,9 @@ exports.createPages = async ({graphql, actions}) => {
             fields {
               slug
             }
+            frontmatter {
+              isPublished
+            }
           }
         }
       }
@@ -48,17 +51,19 @@ exports.createPages = async ({graphql, actions}) => {
     return
   }
   
-  result.data.allMdx.edges.forEach(({node}) => {
-    if(node.fields) {
-      actions.createPage({
-        path: node.fields.slug,
-        component: path.resolve("./src/templates/post.jsx"),
-        context: {
-          slug: node.fields.slug
-        }
-      })
-    }
-  })
+  result.data.allMdx.edges
+    .filter(node => isProd ? node.frontmatter.isPublished : true)
+    .forEach(({node}) => {
+      if(node.fields) {
+        actions.createPage({
+          path: node.fields.slug,
+          component: path.resolve("./src/templates/post.jsx"),
+          context: {
+            slug: node.fields.slug
+          }
+        })
+      }
+    })
 
   // Extract tag data from query
   const categories = result.data.categories.group
@@ -74,14 +79,14 @@ exports.createPages = async ({graphql, actions}) => {
   })
 }
 
-const shouldInclude = (path) => {
-  const pathsToIgnore = ['/preview']
-  return pathsToIgnore.every(ignoredPath => path.includes(ignoredPath))
-} 
+// const shouldInclude = (path) => {
+//   const pathsToIgnore = ['/preview']
+//   return pathsToIgnore.every(ignoredPath => path.includes(ignoredPath))
+// } 
 
-exports.onCreatePage = async({page, actions}) => {
-  const { deletePage } = actions
-  if (isProd && shouldInclude(page.path)) {
-    deletePage(page)
-  }
-}
+// exports.onCreatePage = async({page, actions}) => {
+//   const { deletePage } = actions
+//   if (isProd && shouldInclude(page.path)) {
+//     deletePage(page)
+//   }
+// }

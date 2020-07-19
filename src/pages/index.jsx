@@ -70,7 +70,7 @@ const Index = (props) => {
 
 export const pageQuery = graphql`
   query posts {
-    allMdx(filter: {frontmatter: {isPublished: {eq: true}}}, sort: {order: ASC, fields: frontmatter___date}) {
+    allMdx(sort: {order: ASC, fields: frontmatter___date}) {
       edges {
         node {
           id
