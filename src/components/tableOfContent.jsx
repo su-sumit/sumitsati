@@ -1,14 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import ScrollSpy from "../../scroll-spy/index"
+import SpyScroll from "spy-scroll"
 
 const StyledAside = styled.aside`
   grid-area: aside;
   top: 0;
-  height: 100vh;
+  height: calc(80vh - 2.2rem);
   position: sticky;
-  /* justify-self: flex-end; */
   top: 2.2rem;
   @media (max-width: 640px) {
     display: none;
@@ -28,7 +27,7 @@ const StyledLink = styled(props => <Link {...props} />)`
   }
 `
 
-const StyledScrollSpy = styled((props) => <ScrollSpy {...props} />)`
+const StyledSpyScroll = styled((props) => <SpyScroll {...props} />)`
   list-style: none;
   margin: 0;
   padding: 0;
@@ -55,14 +54,13 @@ const StyledScrollSpy = styled((props) => <ScrollSpy {...props} />)`
 const TableOfContent = ({tableOfContents}) => (
   <StyledAside>
     <h1>Table of contents</h1>
-    {/* <StyledScrollSpy items={tableOfContents.map(({url}) => url.replace('#', ''))} currentClassName="active" /> */}
-    <StyledScrollSpy items={tableOfContents.map(({url}) => url.replace('#', ''))} currentClassName="active" scrolledPastClassName="past">
+    <StyledSpyScroll items={tableOfContents.map(({url}) => url.replace('#', ''))} currentClassName="active" scrolledPastClassName="past">
       { tableOfContents.map(({url, title}) => (
-        <li key={title}>
+        <li key={title} id={title} >
           <StyledLink to={url}>{title}</StyledLink>
         </li>
       ))}
-    </StyledScrollSpy>
+    </StyledSpyScroll>
   </StyledAside>
 )
 
