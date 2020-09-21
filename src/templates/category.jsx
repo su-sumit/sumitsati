@@ -10,7 +10,7 @@ import PostPreview from "../components/postPreview"
 const StyledLogo = styled.img`
   width: 35px;
   height: 35px;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   margin-right: 1.5rem;
   @media (min-width: 640px) {
     width: 50px;

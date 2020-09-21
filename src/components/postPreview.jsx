@@ -60,7 +60,7 @@ const PostPreview = (props) => {
   const {date, excerpt, category, title} = frontmatter;
 
   const navigateToArticle = (e) => {
-    e.preventDefault()
+    e.stopPropagation()
     navigate(fields.slug)
   }
 

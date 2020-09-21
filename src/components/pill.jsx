@@ -15,7 +15,7 @@ const StyledImage = styled.div`
 const Pill = ({category, to}) => {
   const {logo, label} = categoriesMeta(category)
   return (
-    <Link to={to ?? `/category/${category}`} className={`tag ${category}`}>
+    <Link to={to ?? `/category/${category}`} onClick={e => e.stopPropagation()} className={`tag ${category}`}>
       <StyledImage image={logo} />
       <strong>{label ?? category}</strong>
     </Link>
